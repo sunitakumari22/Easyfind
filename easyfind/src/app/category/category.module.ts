@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { ToolbarModule } from 'primeng/toolbar';
+import { DoctorsCategoryComponent } from './doctors-category/doctors-category.component';
 @NgModule({
     imports: [
         CommonModule,
     DoctorsComponent,
-    ToolbarModule
+    ToolbarModule,
+    DoctorsCategoryComponent
 ],
     declarations: [
         
@@ -16,7 +18,8 @@ import { ToolbarModule } from 'primeng/toolbar';
         DoctorsComponent
     ],
     exports: [
-        DoctorsComponent
+        DoctorsComponent,
+        DoctorsCategoryComponent
     ]
 })
 export class CategoryModule {

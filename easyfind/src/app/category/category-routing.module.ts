@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { DashBoardComponent } from '../dash-board/dash-board.component';
 import { SharedModule } from 'primeng/api';
 import { DoctorsComponent } from './doctors/doctors.component';
+import { DoctorsCategoryComponent } from './doctors-category/doctors-category.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
 
         children: [
             { path: '/doctors', component: DoctorsComponent, data: { title: 'Doctors Components' } },
+            { path: '/doctors-categories', component: DoctorsCategoryComponent, data: { title: 'Doctors Components' } },
             // { path: 'UnauthorizedAccess', component: UnauthorizedAccessComponent, data: { title: 'UnauthorizedAccess' } },
             // { path: 'ForbiddenAccess', component: ForbiddenAccessComponent, data: { title: 'ForbiddenAccess' } },
             // { path: 'InternalServerError', component: InternalServerErrorComponent, data: { title: 'InternalServerError' } },
