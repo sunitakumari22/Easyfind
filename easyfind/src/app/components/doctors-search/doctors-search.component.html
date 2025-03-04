@@ -1,0 +1,39 @@
+
+<div class="col-12 pt-3">
+    <div class="card p-4 shadow-md rounded-lg bg-white">
+
+        <!-- <div class="flex align-items-center gap-3 mb-4">
+            <div class="col-12 md:col-6 lg:col-4">
+                <label for="specialization" class="font-bold text-sm">Filter by Specialization</label>
+                <p-dropdown 
+                    [options]="specializations" 
+                    [(ngModel)]="selectedSpecialization" 
+                    placeholder="Select Specialization" 
+                    (onChange)="filterDoctors()">
+                </p-dropdown>
+            </div>
+        </div> -->
+
+        <div class="grid">
+            <div *ngFor="let doctor of filteredDoctors" class="col-12 md:col-4 lg:col-4">
+                <div class="p-card shadow-2 p-3 mb-3">
+                    <div class="text-lg font-semibold">{{ doctor.name }}</div>
+                    <div class="text-sm text-color-secondary mt-1">
+                        <i class="pi pi-briefcase mr-1"></i>{{ doctor.specialization }}
+                    </div>
+                    <div class="text-sm text-color-secondary mt-1">
+                        <i class="pi pi-building mr-1"></i>{{ doctor.hospital }}
+                    </div>
+                    <div class="text-sm text-color-secondary mt-1">
+                        <i class="pi pi-map-marker mr-1"></i>{{ doctor.location }}
+                    </div>
+                    <div class="text-sm text-color-secondary mt-1">
+                        <i class="pi pi-clock mr-1"></i>{{ doctor.experience }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <p-message *ngIf="filteredDoctors.length === 0" severity="info" text="No doctors found for this specialization."></p-message> -->
+    </div>
+</div>
