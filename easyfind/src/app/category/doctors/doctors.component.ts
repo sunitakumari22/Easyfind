@@ -27,7 +27,8 @@ export class DoctorsComponent {
 
   ngOnInit() {
       this.productService.getProducts().then((data) => {
-          this.products.set([...data.slice(0,12)]);
+        const length=data.length
+          this.products.set([...data.slice(0,length)]);
       });
       this.getLocation();
   }
@@ -37,20 +38,6 @@ export class DoctorsComponent {
 
     })}
 
-  getSeverity(product: Doctors) {
-      switch (product.inventoryStatus) {
-          case 'INSTOCK':
-              return 'success';
-
-          case 'LOWSTOCK':
-              return 'warn';
-
-          case 'OUTOFSTOCK':
-              return 'danger';
-
-          default:
-              return null;
-      }
-  }
+ 
 
 }
