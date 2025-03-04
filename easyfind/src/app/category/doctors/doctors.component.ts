@@ -5,6 +5,7 @@ import { InputIconModule } from 'primeng/inputicon';
 import { DoctorsService } from '../../service/doctors.service';
 import { Doctors } from '../../models/doctors';
 import { SearchLocationService } from '../../service/search-location.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class DoctorsComponent {
   options = ['list', 'grid'];
 
   constructor(private productService: DoctorsService,
-    private searchLocation: SearchLocationService
+    private searchLocation: SearchLocationService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -37,6 +39,12 @@ export class DoctorsComponent {
         this.location=data.city;
 
     })}
+
+    fetchDoctorsBySpecialization(Specialization:string){
+      if (Specialization) {
+        this.router.navigateByUrl(`/doctors-search`);
+      }
+    }
 
  
 
