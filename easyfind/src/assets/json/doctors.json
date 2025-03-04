@@ -1,0 +1,89 @@
+{"doctors":
+[ 
+
+    {
+        "name": "Dr. Sandeep Kumar",
+        "specialization": "Surgical Oncology",
+        "experience": "5 years",
+        "hospital": "HCG Abdur Razzaque Ansari Cancer Centre",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Abhishek Kumar",
+        "specialization": "Pediatric Oncology",
+        "experience": "5 years",
+        "hospital": "HCG Abdur Razzaque Ansari Cancer Centre",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Chandrashekhar Prasad Singh",
+        "specialization": "Medical Oncology",
+        "experience": "12 years",
+        "hospital": "HCG Abdur Razzaque Ansari Cancer Centre",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Aftab Alam Ansari",
+        "specialization": "Radiation Oncology",
+        "experience": "17 years",
+        "hospital": "HCG Abdur Razzaque Ansari Cancer Centre",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Prince Gupta",
+        "specialization": "Plastic Surgery",
+        "experience": "8 years",
+        "hospital": "HCG Abdur Razzaque Ansari Cancer Centre",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Ganesh Agarwal",
+        "specialization": "Surgical Oncology",
+        "experience": "8 years",
+        "hospital": "HCG Abdur Razzaque Ansari Cancer Centre",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Neeru Jyotsna",
+        "specialization": "Nuclear Medicine",
+        "experience": "5 years",
+        "hospital": "HCG Abdur Razzaque Ansari Cancer Centre",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Bharti Kashyap",
+        "specialization": "Ophthalmology",
+        "experience": "30+ years",
+        "hospital": "Kashyap Memorial Eye Hospital",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Rajesh Kumar",
+        "specialization": "Chest Specialist (Pulmonology)",
+        "experience": "15+ years",
+        "hospital": "RIMS Ranchi",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Ajay Kumar",
+        "specialization": "Cardiologist",
+        "experience": "20+ years",
+        "hospital": "Medanta Hospital",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Anupama Sinha",
+        "specialization": "Gynecologist & Obstetrician",
+        "experience": "18+ years",
+        "hospital": "Santevita Hospital",
+        "location": "Ranchi, Jharkhand"
+    },
+    {
+        "name": "Dr. Manoj Kumar",
+        "specialization": "Orthopedic Surgeon",
+        "experience": "20+ years",
+        "hospital": "Raj Hospital",
+        "location": "Ranchi, Jharkhand"
+    }
+]
+}
