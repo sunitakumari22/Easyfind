@@ -2,7 +2,7 @@
     <div class="grid">
         <div class="col-12">
             <div class="toolbar-demo card">
-
+                <p-toolbar>
                 <div class="p-toolbar-group-left">
                     <div class="header-left-div flex align-items-center">
                         <div class="header-div1 mr-3">
@@ -13,6 +13,25 @@
                         </div>
                     </div>
                 </div>
+                <ng-template pTemplate="right">
+                    <div class="p-d-flex p-flex-column p-flex-md-row " style="gap:25px">
+                        <label for="" class="font-bold">
+                            <i class="pi pi-map-marker" style="margin: 3px;"></i> Location<span
+                                style="color: red;">*</span>
+                        </label>
+                        <div class="relative">
+                            <input
+                                type="text"
+                                pInputText
+                                [(ngModel)]="location"
+                                placeholder="Search Location"
+                                class="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            />
+                        </div>
+                    </div>
+                </ng-template>
+              </p-toolbar>
+                
             </div>
         </div>
 
