@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DoctorsSearchService } from '../../service/doctors-search.service';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-doctors-search',
@@ -11,18 +12,34 @@ import { CommonModule } from '@angular/common';
   styleUrl: './doctors-search.component.scss'
 })
 export class DoctorsSearchComponent implements OnInit {
+  @ViewChild('searchInput', { static: false }) searchInput: any;
   doctors: any[] = [];
   filteredDoctors: any[] = [];
   specializations: string[] = [];
   selectedSpecialization: string = '';
 
-  constructor(private doctorService: DoctorsSearchService) {}
+  constructor(private doctorService: DoctorsSearchService,
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
-    this.doctorService.getDoctors().subscribe(response => {
-      this.doctors = response.doctors;
-      this.filteredDoctors = [...this.doctors];
-      this.extractSpecializations();
+    this.route.queryParams.subscribe(params => {
+      this.selectedSpecialization = params['specialization'] || '';
+  
+      this.doctorService.getDoctors().subscribe(response => {
+        console.log(this.selectedSpecialization,"here");
+        this.doctors = response;
+        console.log(this.doctors);
+        
+        this.filteredDoctors = [...this.doctors];
+        this.extractSpecializations();
+        if (this.selectedSpecialization) {
+          this.filterDoctors();
+        }
+        console.log(this.filteredDoctors,"filter doctors");
+        
+      });
     });
   }
 
