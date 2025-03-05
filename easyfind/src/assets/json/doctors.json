@@ -1,5 +1,6 @@
 
-{"doctors":
+{
+    "doctors":
 [ 
 
 {
@@ -816,5 +817,102 @@
         "image": "https://via.placeholder.com/100"
     }
     
+],
+
+"Hotels":[
+    {
+        "name": "Divisha Hotels",
+        "rating": 4.6,
+        "reviews": 3916,
+        "trust": true,
+        "verified": true,
+        "topSearch": true,
+        "address": "Walking Street Main Road, Ranchi",
+        "amenities": ["Parking Available", "WiFi", "Air Conditioned"],
+        "phone": "07383234878",
+        "whatsappLink": "https://wa.me/07383234878",
+        "recentEnquiries": 219,
+        "image": "https://example.com/hotel1.jpg"
+    },
+    {
+        "name": "Hotel Churuwala Inn",
+        "rating": 3.7,
+        "reviews": 2147,
+        "trust": false,
+        "verified": false,
+        "responsive": true,
+        "address": "Usha Complex Main Road, Ranchi",
+        "amenities": ["24 Hour Concierge/Help Desk"],
+        "phone": "08128707813",
+        "whatsappLink": "https://wa.me/08128707813",
+        "recentEnquiries": 89,
+        "image": "https://example.com/hotel2.jpg"
+    },
+    {
+        "name": "The Lake Castle",
+        "rating": 4.5,
+        "reviews": 73,
+        "trust": true,
+        "verified": true,
+        "responsive": true,
+        "address": "Kanke Road, Ranchi",
+        "amenities": ["Parking Available", "WiFi", "Swimming Pool"],
+        "phone": "08401413754",
+        "whatsappLink": "https://wa.me/08401413754",
+        "recentEnquiries": 99,
+        "image": "https://example.com/hotel3.jpg"
+    }
+],
+"RealState":[
+    {
+        "name": "Aashiyana Star Properties",
+        "rating": 4.5,
+        "reviews": 359,
+        "trust": true,
+        "verified": true,
+        "topSearch": true,
+        "address": "Lower Shukla Colony Hinoo, Ranchi",
+        "serviceFeedback": "Satisfactory service",
+        "suggestions": 15,
+        "amenities": ["Online Appointments"],
+        "phone": "08401359385",
+        "whatsappLink": "https://wa.me/08401359385",
+        "recentEnquiries": 298,
+        "image": "https://example.com/aashiyana-star.png"
+    },
+    {
+        "name": "Ayyan Properties Dealer Pvt Ltd",
+        "rating": 3.9,
+        "reviews": 224,
+        "trust": true,
+        "verified": true,
+        "popular": true,
+        "address": "Main Road Main Road, Ranchi",
+        "services": [
+            "Estate Agents For Commercial Rental",
+            "Estate Agents For Residential Rental"
+        ],
+        "phone": "08401974898",
+        "whatsappLink": "https://wa.me/08401974898",
+        "recentEnquiries": 231,
+        "image": "https://example.com/ayyan-properties.png"
+    },
+    {
+        "name": "Shakti Properties",
+        "rating": 4.4,
+        "reviews": 75,
+        "trust": true,
+        "verified": true,
+        "responsive": true,
+        "address": "HB Road Lalpur, Ranchi",
+        "services": [
+            "Estate Agents For Commercial Rental",
+            "Real Estate Agents"
+        ],
+        "phone": "08197633194",
+        "whatsappLink": "https://wa.me/08197633194",
+        "recentEnquiries": 140,
+        "image": "https://example.com/shakti-properties.png"
+    }
 ]
 }
