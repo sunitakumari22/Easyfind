@@ -1,0 +1,46 @@
+{
+    "Hotels":[
+    {
+        "name": "Divisha Hotels",
+        "rating": 4.6,
+        "reviews": 3916,
+        "trust": true,
+        "verified": true,
+        "topSearch": true,
+        "address": "Walking Street Main Road, Ranchi",
+        "amenities": ["Parking Available", "WiFi", "Air Conditioned"],
+        "phone": "07383234878",
+        "whatsappLink": "https://wa.me/07383234878",
+        "recentEnquiries": 219,
+        "image": "https://example.com/hotel1.jpg"
+    },
+    {
+        "name": "Hotel Churuwala Inn",
+        "rating": 3.7,
+        "reviews": 2147,
+        "trust": false,
+        "verified": false,
+        "responsive": true,
+        "address": "Usha Complex Main Road, Ranchi",
+        "amenities": ["24 Hour Concierge/Help Desk"],
+        "phone": "08128707813",
+        "whatsappLink": "https://wa.me/08128707813",
+        "recentEnquiries": 89,
+        "image": "https://example.com/hotel2.jpg"
+    },
+    {
+        "name": "The Lake Castle",
+        "rating": 4.5,
+        "reviews": 73,
+        "trust": true,
+        "verified": true,
+        "responsive": true,
+        "address": "Kanke Road, Ranchi",
+        "amenities": ["Parking Available", "WiFi", "Swimming Pool"],
+        "phone": "08401413754",
+        "whatsappLink": "https://wa.me/08401413754",
+        "recentEnquiries": 99,
+        "image": "https://example.com/hotel3.jpg"
+    }
+]
+}
