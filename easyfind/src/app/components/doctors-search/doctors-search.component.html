@@ -1,0 +1,81 @@
+<div class="pb-6">
+    <div class="grid">
+        <p-toast></p-toast>
+        <div class="col-12">
+            <div class="toolbar-demo card">
+           
+              <div class="p-toolbar-group-left">
+                <div class="header-left-div flex align-items-center">
+                  <div class="header-div1 mr-3">
+                    <i class="pi pi-users" style="font-size: 2rem; color: var(--primary-color);"></i>
+                  </div>
+                  <div class="header-div2" >
+                    <h5 class="m-0" style="font-size: 1.5rem; color: var(--text-color);">{{this.selectedSpecialization }}</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 pt-3">
+            <div class="card p-4 shadow-md rounded-lg bg-white">
+                <div class="grid">
+                    <div *ngFor="let doctor of filteredDoctors" class="col-12 md:col-12 lg:col-12">
+                        <div class="doctor-card p-3 mb-3 shadow-sm rounded-lg flex border border-gray-200 bg-white">
+                            <div class="doctor-image">
+                                <img [src]="doctor.image" alt="{{doctor.name}}" class="rounded-md object-cover" width="100" height="100">
+                            </div>
+                            <div class="doctor-details flex-1 ml-3">
+                                <div class="flex justify-between items-start">
+                                    <div class="text-lg font-semibold">{{ doctor.name }}</div>
+                                    
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-xs font-medium bg-yellow-300 text-black px-2 py-1 rounded">Trust</span>
+                                        <span class="text-xs font-medium bg-blue-500 text-white px-2 py-1 rounded">Verified</span>
+                                        <span class="text-xs font-medium bg-orange-500 text-white px-2 py-1 rounded">Top Search</span>
+                                    </div>
+                                </div>
+                                <div class="text-lg font-semibold">{{ doctor.specialization }}</div>
+        
+                                <div class="flex items-center text-sm mt-1">
+                                    <span class="font-bold text-green-600 text-sm flex items-center">
+                                        <i class="pi pi-star-fill mr-1"></i>{{ doctor.rating }} 
+                                    </span>
+                                    <span class="text-gray-500 ml-2">{{ doctor.reviews }} Ratings</span>
+                                </div>
+        
+                                <div class="text-sm text-gray-700 mt-1">
+                                    <i class="pi pi-map-marker mr-1"></i>{{ doctor.location }}
+                                </div>
+                                <div class="text-sm text-gray-700 mt-1">
+                                    {{ doctor.experience }} in Healthcare
+                                </div>
+        
+                                <div class="text-xs text-red-600 mt-1">
+                                    <i class="pi pi-exclamation-circle mr-1"></i>"{{ doctor.connectionNote }}" {{ doctor.suggestions }} Suggestions
+                                </div>
+        
+                                <div class="flex items-center mt-3 space-x-2">
+                                    <a [href]="'tel:' + doctor.phone" class="px-3 py-2 bg-green-600 text-white rounded flex items-center">
+                                        <i class="pi pi-phone mr-2"></i>{{ doctor.phone }}
+                                    </a>
+                                    <a [href]="doctor.whatsappLink" target="_blank" class="px-3 py-2 bg-green-500 text-white rounded flex items-center">
+                                        <i class="pi pi-whatsapp mr-2"></i> WhatsApp
+                                    </a>
+                                    <button class="px-3 py-2 bg-blue-600 text-white rounded flex items-center">
+                                        <i class="pi pi-send mr-2"></i> Send Enquiry
+                                    </button>
+                                </div>
+        
+                                <div class="text-xs text-gray-500 mt-2">
+                                    <i class="pi pi-chart-line mr-1"></i>{{ doctor.recentEnquiries }} people recently enquired
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+

@@ -25,7 +25,7 @@ export class AppMenu {
                 items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }]
             },
             {
-                label: 'UI Components',
+                label: 'Categories',
                 items: [
                     { label: 'Doctors', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
                     { label: 'Real State', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input'] },

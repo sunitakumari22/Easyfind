@@ -5,6 +5,7 @@ import { InputIconModule } from 'primeng/inputicon';
 import { DoctorsService } from '../../service/doctors.service';
 import { Doctors } from '../../models/doctors';
 import { SearchLocationService } from '../../service/search-location.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,12 +23,14 @@ export class DoctorsComponent {
   options = ['list', 'grid'];
 
   constructor(private productService: DoctorsService,
-    private searchLocation: SearchLocationService
+    private searchLocation: SearchLocationService,
+    private router: Router
   ) {}
 
   ngOnInit() {
       this.productService.getProducts().then((data) => {
-          this.products.set([...data.slice(0,12)]);
+        const length=data.length
+          this.products.set([...data.slice(0,length)]);
       });
       this.getLocation();
   }
@@ -37,20 +40,12 @@ export class DoctorsComponent {
 
     })}
 
-  getSeverity(product: Doctors) {
-      switch (product.inventoryStatus) {
-          case 'INSTOCK':
-              return 'success';
-
-          case 'LOWSTOCK':
-              return 'warn';
-
-          case 'OUTOFSTOCK':
-              return 'danger';
-
-          default:
-              return null;
+    fetchDoctorsBySpecialization(specialization:string){
+      if (specialization) {
+        this.router.navigate(['/doctors-search'], { queryParams: { specialization } });
       }
-  }
+    }
+
+ 
 
 }
