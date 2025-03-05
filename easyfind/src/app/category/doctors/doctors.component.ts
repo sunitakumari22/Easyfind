@@ -40,9 +40,9 @@ export class DoctorsComponent {
 
     })}
 
-    fetchDoctorsBySpecialization(Specialization:string){
-      if (Specialization) {
-        this.router.navigateByUrl(`/doctors-search`);
+    fetchDoctorsBySpecialization(specialization:string){
+      if (specialization) {
+        this.router.navigate(['/doctors-search'], { queryParams: { specialization } });
       }
     }
 
