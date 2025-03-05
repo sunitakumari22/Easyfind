@@ -4,10 +4,13 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   selector: 'app-doctors-search',
-  imports: [DropdownModule,FormsModule ,CommonModule ],
+  imports: [DropdownModule,FormsModule ,CommonModule ,ToastModule],
+  providers:[MessageService],
   templateUrl: './doctors-search.component.html',
   styleUrl: './doctors-search.component.scss'
 })
@@ -21,6 +24,7 @@ export class DoctorsSearchComponent implements OnInit {
   constructor(private doctorService: DoctorsSearchService,
     private router: Router,
     private route: ActivatedRoute,
+    private messageService: MessageService,
   ) {}
 
   ngOnInit() {
@@ -50,12 +54,21 @@ export class DoctorsSearchComponent implements OnInit {
 
   filterDoctors() {
     if (this.selectedSpecialization) {
-      this.filteredDoctors = this.doctors.filter(doctor => 
-        doctor.specialization === this.selectedSpecialization
-      );
+        this.filteredDoctors = this.doctors.filter(doctor => 
+            doctor.specialization === this.selectedSpecialization
+        );
     } else {
-      this.filteredDoctors = [...this.doctors];
+        this.filteredDoctors = [...this.doctors];
     }
-  }
+    if (this.filteredDoctors.length === 0) {
+        this.messageService.add({ 
+            severity: 'info', 
+            summary: 'No Data', 
+            detail: 'No doctors available for the selected specialization.', 
+            life: 3000 
+        });
+    }
+}
+
 
 }
