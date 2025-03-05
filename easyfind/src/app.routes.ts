@@ -8,6 +8,8 @@ import { DashBoardComponent } from './app/dash-board/dash-board.component';
 import { DoctorsComponent } from './app/category/doctors/doctors.component';
 import { DoctorsCategoryComponent } from './app/category/doctors-category/doctors-category.component';
 import { DoctorsSearchComponent } from './app/components/doctors-search/doctors-search.component';
+import { RealStateComponent } from './app/components/real-state/real-state.component';
+import { HotelsComponent } from './app/components/hotels/hotels.component';
 
 export const appRoutes: Routes = [
     {
@@ -18,6 +20,8 @@ export const appRoutes: Routes = [
             { path: '', component: DashBoardComponent },
             { path: 'doctors', component: DoctorsComponent, data: { title: 'Doctors Components' } },
             { path: 'doctors-search', component: DoctorsSearchComponent, data: { title: 'Doctors Components' } },
+            { path: 'real-state', component: RealStateComponent, data: { title: 'Real State Components' } },
+            { path: 'hotels', component: HotelsComponent, data: { title: 'Hotels Components' } },
             { path: 'doctors-categories', component: DoctorsCategoryComponent, data: { title: 'Doctors Components' } },
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },

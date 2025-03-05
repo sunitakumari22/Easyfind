@@ -27,9 +27,9 @@ export class AppMenu {
             {
                 label: 'Categories',
                 items: [
-                    { label: 'Doctors', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
-                    { label: 'Real State', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input'] },
-                    { label: 'Hotels', icon: 'pi pi-fw pi-mobile', class: 'rotated-icon', routerLink: ['/uikit/button'] },
+                    { label: 'Doctors', icon: 'pi pi-fw pi-id-card', routerLink: ['/doctors'] },
+                    { label: 'Real State', icon: 'pi pi-fw pi-check-square', routerLink: ['/real-state'] },
+                    { label: 'Hotels', icon: 'pi pi-fw pi-mobile', class: 'rotated-icon', routerLink: ['/hotels'] },
                     { label: 'Restaurants', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table'] },
                     { label: 'Beauty Spa', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
                     { label: 'Aashram', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
