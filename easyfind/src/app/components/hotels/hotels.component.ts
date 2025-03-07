@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
 import { ToolbarModule } from 'primeng/toolbar';
 import { SearchLocationService } from '../../service/search-location.service';
 import { FormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-hotels',
-  imports: [CommonModule,ToolbarModule,FormsModule],
+  imports: [CommonModule,ToolbarModule,FormsModule,InputTextModule ],
   providers: [MessageService],
   templateUrl: './hotels.component.html',
   styleUrl: './hotels.component.scss'
