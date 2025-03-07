@@ -914,5 +914,13 @@
         "recentEnquiries": 140,
         "image": "https://example.com/shakti-properties.png"
     }
+],
+"user":[
+    {
+        "name":"siya",
+        "email":"siya@gmial.com",
+        "mobile":"89876765456",
+        "password":"Siya@123"
+    }
 ]
 }
