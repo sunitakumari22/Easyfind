@@ -11,6 +11,6 @@ export class RealStateService {
     constructor(private http: HttpClient) { }
     
       getRealState(): Observable<any> {
-        return this.http.get('http://localhost:3000/RealState'); 
+        return this.http.get('http://localhost:5000/api/realStateList'); 
       }
     }

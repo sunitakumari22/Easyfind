@@ -10,6 +10,6 @@ export class HotelService {
   constructor(private http: HttpClient) { }
   
     getHotels(): Observable<any> {
-      return this.http.get('http://localhost:3000/Hotels'); 
+      return this.http.get('http://localhost:5000/api/hotelList'); 
     }
 }
