@@ -10,6 +10,6 @@ export class DoctorsSearchService {
   constructor(private http: HttpClient) { }
 
   getDoctors(): Observable<any> {
-    return this.http.get('http://localhost:3000/doctors'); // Replace with your actual endpoint
+    return this.http.get('http://localhost:5000/api/doctorsList'); 
   }
 }
