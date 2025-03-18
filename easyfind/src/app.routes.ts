@@ -10,6 +10,7 @@ import { DoctorsCategoryComponent } from './app/category/doctors-category/doctor
 import { DoctorsSearchComponent } from './app/components/doctors-search/doctors-search.component';
 import { RealStateComponent } from './app/components/real-state/real-state.component';
 import { HotelsComponent } from './app/components/hotels/hotels.component';
+import { LoginComponent } from './app/components/login/login.component';
 
 export const appRoutes: Routes = [
     {
@@ -18,6 +19,7 @@ export const appRoutes: Routes = [
         children: [
             // { path: '', component: Dashboard },
             { path: '', component: DashBoardComponent },
+            { path: 'login', component: LoginComponent, data: { title: 'Doctors Components' } },
             { path: 'doctors', component: DoctorsComponent, data: { title: 'Doctors Components' } },
             { path: 'doctors-search', component: DoctorsSearchComponent, data: { title: 'Doctors Components' } },
             { path: 'real-state', component: RealStateComponent, data: { title: 'Real State Components' } },
