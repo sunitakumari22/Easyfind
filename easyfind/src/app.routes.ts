@@ -11,6 +11,7 @@ import { DoctorsSearchComponent } from './app/components/doctors-search/doctors-
 import { RealStateComponent } from './app/components/real-state/real-state.component';
 import { HotelsComponent } from './app/components/hotels/hotels.component';
 import { LoginComponent } from './app/components/login/login.component';
+import { RestaurantsComponent } from './app/components/restaurants/restaurants.component';
 
 export const appRoutes: Routes = [
     {
@@ -24,6 +25,7 @@ export const appRoutes: Routes = [
             { path: 'doctors-search', component: DoctorsSearchComponent, data: { title: 'Doctors Components' } },
             { path: 'real-state', component: RealStateComponent, data: { title: 'Real State Components' } },
             { path: 'hotels', component: HotelsComponent, data: { title: 'Hotels Components' } },
+            { path: 'restaurants', component: RestaurantsComponent, data: { title: 'Restaurants Components' } },
             { path: 'doctors-categories', component: DoctorsCategoryComponent, data: { title: 'Doctors Components' } },
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             { path: 'documentation', component: Documentation },
