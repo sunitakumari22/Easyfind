@@ -31,6 +31,7 @@ export class AppMenu {
                     { label: 'Real State', icon: 'pi pi-fw pi-check-square', routerLink: ['/real-state'] },
                     { label: 'Hotels', icon: 'pi pi-fw pi-mobile', class: 'rotated-icon', routerLink: ['/hotels'] },
                     { label: 'Restaurants', icon: 'pi pi-fw pi-table', routerLink: ['/restaurants'] },
+                    { label: 'HomeDecore', icon: 'pi pi-fw pi-table', routerLink: ['/homeDecore'] },
                     { label: 'Beauty Spa', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
                     { label: 'Aashram', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
                     { label: 'Gym', icon: 'pi pi-fw pi-tablet', routerLink: ['/gym'] },
