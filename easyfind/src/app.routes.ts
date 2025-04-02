@@ -14,6 +14,7 @@ import { LoginComponent } from './app/components/login/login.component';
 import { RestaurantsComponent } from './app/components/restaurants/restaurants.component';
 import { GymComponent } from './app/components/gym/gym.component';
 import { HomeDecoreComponent } from './app/components/home-decore/home-decore.component';
+import { AddNewComponent } from './app/components/add-new/add-new.component';
 
 export const appRoutes: Routes = [
     {
@@ -29,6 +30,7 @@ export const appRoutes: Routes = [
             { path: 'hotels', component: HotelsComponent, data: { title: 'Hotels Components' } },
             { path: 'restaurants', component: RestaurantsComponent, data: { title: 'Restaurants Components' } },
             { path: 'homeDecore', component: HomeDecoreComponent, data: { title: 'HomeDecore Components' } },
+            { path: 'addNew', component: AddNewComponent, data: { title: 'Add new' } },
             { path: 'gym', component: GymComponent, data: { title: 'Gym Components' } },
             { path: 'doctors-categories', component: DoctorsCategoryComponent, data: { title: 'Doctors Components' } },
             { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },

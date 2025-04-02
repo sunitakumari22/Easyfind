@@ -1,0 +1,62 @@
+<p-toast></p-toast>
+<div class="card p-4 shadow-lg rounded-lg bg-white">
+  <h3 class="text-center text-lg font-semibold">Add New Hotel</h3>
+  
+  <form [formGroup]="hotelForm" >
+    <div class="grid">
+      <!-- Hotel Name -->
+      <div class="col-12">
+        <label class="font-semibold">Hotel Name</label>
+        <input type="text" pInputText formControlName="name" class="w-full p-2 border rounded" />
+      </div>
+
+      <!-- Rating & Reviews -->
+      <div class="col-6">
+        <label class="font-semibold">Rating</label>
+        <input type="number" pInputText formControlName="rating" class="w-full p-2 border rounded" min="0" max="5" />
+      </div>
+      <div class="col-6">
+        <label class="font-semibold">Reviews</label>
+        <input type="number" pInputText formControlName="reviews" class="w-full p-2 border rounded" />
+      </div>
+
+      <!-- Address -->
+      <div class="col-12">
+        <label class="font-semibold">Address</label>
+        <input type="text" pInputText formControlName="address" class="w-full p-2 border rounded" />
+      </div>
+
+      <!-- Phone -->
+      <div class="col-6">
+        <label class="font-semibold">Phone</label>
+        <input type="text" pInputText formControlName="phone" class="w-full p-2 border rounded" />
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="col-6">
+        <label class="font-semibold">WhatsApp Link</label>
+        <input type="text" pInputText formControlName="whatsappLink" class="w-full p-2 border rounded" />
+      </div>
+
+      <!-- Recent Enquiries -->
+      <div class="col-12">
+        <label class="font-semibold">Recent Enquiries</label>
+        <input type="number" pInputText formControlName="recentEnquiries" class="w-full p-2 border rounded" />
+      </div>
+
+      <!-- Image URL -->
+      <div class="col-12">
+        <label class="font-semibold">Image URL</label>
+        <input type="text" pInputText formControlName="image" class="w-full p-2 border rounded" />
+      </div>
+
+      <!-- Boolean Options -->
+    
+      <!-- Submit Button -->
+      <div class="col-12 text-center mt-3">
+        <button pButton type="submit" onclick="submitForm()" label="Submit" class="p-button-success" ></button>
+      </div>
+    </div>
+  </form>
+</div>
+
