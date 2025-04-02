@@ -35,66 +35,67 @@
             </div>
         </div>
 
+       
+
+
         <div class="col-12 pt-3">
             <div class="card p-4 shadow-md rounded-lg bg-white">
                 <div class="grid">
-                    <div *ngFor="let hotels of filteredHotels" class="col-12 md:col-12 lg:col-12">
-                        <div class="hotels-card p-3 mb-3 shadow-sm rounded-lg flex border border-gray-200 bg-white">
-                            <div class="hotels-image">
-                                <img [src]="hotels.image" alt="{{hotels.name}}" class="rounded-md object-cover"
-                                    width="100" height="100">
+                    <div *ngFor="let hotels of filteredHotels" class="col-12 md:col-6 lg:col-6">
+                        <div 
+                            class="hotels-card p-3 mb-3 shadow-sm rounded-lg flex flex-col md:flex-row border border-gray-200 bg-white"
+                            style="height: 100%"
+                        >
+                            <!-- hotels Image -->
+                            <div class="hotels-image flex justify-center items-center w-full md:w-40 h-full md:h-30 ">
+                                <img 
+                                    [src]="hotels.image" 
+                                    alt="{{hotels.name}}" 
+                                    class="rounded-md object-cover w-full md:w-40 h-52"
+                                >
                             </div>
-                            <div class="hotels-details flex-1 ml-3">
-                                <div class="flex justify-between items-start">
+        
+                            <!-- hotels Details -->
+                            <div class="hotels-details flex-1 mt-3 md:mt-0 md:ml-4 text-center md:text-left">
+                                <div class="flex items-center text-sm mt-1 justify-center md:justify-start">
                                     <div class="text-lg font-semibold">{{ hotels.name }}</div>
-
-                                    <div class="flex items-center space-x-2">
-                                        <span
-                                            class="text-xs font-medium bg-yellow-300 text-black px-2 py-1 rounded">Trust</span>
-                                        <span
-                                            class="text-xs font-medium bg-blue-500 text-white px-2 py-1 rounded">Verified</span>
-                                        <span class="text-xs font-medium bg-orange-500 text-white px-2 py-1 rounded">Top
-                                            Search</span>
-                                    </div>
+                                    
                                 </div>
+        
                                 <div class="text-lg font-semibold">{{ hotels.specialization }}</div>
-
-                                <div class="flex items-center text-sm mt-1">
+        
+                                <div class="flex items-center text-sm mt-1 justify-center md:justify-start">
                                     <span class="font-bold text-green-600 text-sm flex items-center">
-                                        <i class="pi pi-star-fill mr-1"></i>{{ hotels.rating }}
+                                        <i class="pi pi-star-fill mr-1"></i>{{ hotels.rating }} 
                                     </span>
                                     <span class="text-gray-500 ml-2">{{ hotels.reviews }} Ratings</span>
                                 </div>
-
+        
                                 <div class="text-sm text-gray-700 mt-1">
                                     <i class="pi pi-map-marker mr-1"></i>{{ hotels.location }}
                                 </div>
                                 <div class="text-sm text-gray-700 mt-1">
                                     {{ hotels.experience }} in Healthcare
                                 </div>
-
+        
                                 <div class="text-xs text-red-600 mt-1">
-                                    <i class="pi pi-exclamation-circle mr-1"></i>"{{ hotels.connectionNote }}" {{
-                                    hotels.suggestions }} Suggestions
+                                    <i class="pi pi-exclamation-circle mr-1"></i>"{{ hotels.connectionNote }}" {{ hotels.suggestions }} Suggestions
                                 </div>
-
-                                <div class="flex items-center mt-3 space-x-2">
-                                    <a [href]="'tel:' + hotels.phone"
-                                        class="px-3 py-2 bg-green-600 text-white rounded flex items-center">
+        
+                                <div class="flex flex-col md:flex-row items-center mt-3 space-y-2 md:space-y-0 md:space-x-2">
+                                    <a [href]="'tel:' + hotels.phone" class="px-3 py-2 bg-green-600 text-white rounded flex items-center">
                                         <i class="pi pi-phone mr-2"></i>{{ hotels.phone }}
                                     </a>
-                                    <a [href]="hotels.whatsappLink" target="_blank"
-                                        class="px-3 py-2 bg-green-500 text-white rounded flex items-center">
+                                    <a [href]="hotels.whatsappLink" target="_blank" class="px-3 py-2 bg-green-500 text-white rounded flex items-center">
                                         <i class="pi pi-whatsapp mr-2"></i> WhatsApp
                                     </a>
                                     <button class="px-3 py-2 bg-blue-600 text-white rounded flex items-center">
                                         <i class="pi pi-send mr-2"></i> Send Enquiry
                                     </button>
                                 </div>
-
+        
                                 <div class="text-xs text-gray-500 mt-2">
-                                    <i class="pi pi-chart-line mr-1"></i>{{ hotels.recentEnquiries }} people recently
-                                    enquired
+                                    <i class="pi pi-chart-line mr-1"></i>{{ hotels.recentEnquiries }} people recently enquired
                                 </div>
                             </div>
                         </div>
