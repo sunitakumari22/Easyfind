@@ -2,7 +2,7 @@
 <div class="card p-4 shadow-lg rounded-lg bg-white">
   <h3 class="text-center text-lg font-semibold">Add New Hotel</h3>
   
-  <form [formGroup]="hotelForm" >
+  <form [formGroup]="hotelForm" (ngSubmit)="submitForm()">
     <div class="grid">
       <!-- Hotel Name -->
       <div class="col-12">
@@ -54,7 +54,7 @@
     
       <!-- Submit Button -->
       <div class="col-12 text-center mt-3">
-        <button pButton type="submit" onclick="submitForm()" label="Submit" class="p-button-success" ></button>
+        <button pButton type="submit" onclick="" label="Submit" class="p-button-success" ></button>
       </div>
     </div>
   </form>

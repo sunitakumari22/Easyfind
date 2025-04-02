@@ -48,7 +48,7 @@ export class AddNewComponent {
     this.isSubmitting = true;
     
     
-    this.addNewService.postHotel(this.hotelForm).subscribe({
+    this.addNewService.postHotel(this.hotelForm.value).subscribe({
       next: (response) => {
         console.log("Submitting form:", this.hotelForm.value);
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Hotel data submitted successfully!' });
