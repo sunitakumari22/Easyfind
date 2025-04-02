@@ -19,68 +19,88 @@
           <div class="col-12 pt-3">
             <div class="card p-4 shadow-md rounded-lg bg-white">
                 <div class="grid">
-                    <div *ngFor="let doctor of filteredDoctors" class="col-12 md:col-6 lg:col-6">
-                        <div 
-                            class="doctor-card p-3 mb-3 shadow-sm rounded-lg flex flex-col md:flex-row border border-gray-200 bg-white"
-                            style="height: 100%"
-                        >
-                            <!-- Doctor Image -->
-                            <div class="doctor-image flex justify-center items-center w-full md:w-40 h-full md:h-40">
-                                <img 
-                                    [src]="doctor.image" 
-                                    alt="{{doctor.name}}" 
-                                    class="rounded-md object-cover w-full md:w-40 h-52"
-                                >
-                            </div>
-        
-                            <!-- Doctor Details -->
-                            <div class="doctor-details flex-1 mt-3 md:mt-0 md:ml-4 text-center md:text-left">
-                                <div class="flex items-center text-sm mt-1 justify-center md:justify-start">
-                                    <div class="text-lg font-semibold">{{ doctor.name }}</div>
-                                    
+                    <ng-container *ngIf="isloading; else doctorList">
+                        <div *ngFor="let _ of [1,2,3,4]" class="col-12 md:col-6 lg:col-6">
+                            <div 
+                                class="doctor-card p-3 mb-3 shadow-sm rounded-lg flex flex-col md:flex-row border border-gray-200 bg-white"
+                                style="height: 100%"
+                            >
+                                <div class="doctor-image flex justify-center items-center w-full md:w-40 h-full md:h-30">
+                                    <p-skeleton width="100%" height="200px"></p-skeleton>
                                 </div>
         
-                                <div class="text-lg font-semibold">{{ doctor.specialization }}</div>
-        
-                                <div class="flex items-center text-sm mt-1 justify-center md:justify-start">
-                                    <span class="font-bold text-green-600 text-sm flex items-center">
-                                        <i class="pi pi-star-fill mr-1"></i>{{ doctor.rating }} 
-                                    </span>
-                                    <span class="text-gray-500 ml-2">{{ doctor.reviews }} Ratings</span>
-                                </div>
-        
-                                <div class="text-sm text-gray-700 mt-1">
-                                    <i class="pi pi-map-marker mr-1"></i>{{ doctor.location }}
-                                </div>
-                                <div class="text-sm text-gray-700 mt-1">
-                                    {{ doctor.experience }} in Healthcare
-                                </div>
-        
-                                <div class="text-xs text-red-600 mt-1">
-                                    <i class="pi pi-exclamation-circle mr-1"></i>"{{ doctor.connectionNote }}" {{ doctor.suggestions }} Suggestions
-                                </div>
-        
-                                <div class="flex flex-col md:flex-row items-center mt-3 space-y-2 md:space-y-0 md:space-x-2">
-                                    <a [href]="'tel:' + doctor.phone" class="px-3 py-2 bg-green-600 text-white rounded flex items-center">
-                                        <i class="pi pi-phone mr-2"></i>{{ doctor.phone }}
-                                    </a>
-                                    <a [href]="doctor.whatsappLink" target="_blank" class="px-3 py-2 bg-green-500 text-white rounded flex items-center">
-                                        <i class="pi pi-whatsapp mr-2"></i> WhatsApp
-                                    </a>
-                                    <button class="px-3 py-2 bg-blue-600 text-white rounded flex items-center">
-                                        <i class="pi pi-send mr-2"></i> Send Enquiry
-                                    </button>
-                                </div>
-        
-                                <div class="text-xs text-gray-500 mt-2">
-                                    <i class="pi pi-chart-line mr-1"></i>{{ doctor.recentEnquiries }} people recently enquired
+                                <div class="doctor-details flex-1 mt-3 md:mt-0 md:ml-4 text-center md:text-left">
+                                    <p-skeleton width="60%" height="20px" class="p-3"></p-skeleton>
+                                    <p-skeleton width="40%" height="26px" class="m-2"></p-skeleton>
+                                    <p-skeleton width="80%" height="26px" class="m-2"></p-skeleton>
+                                    <p-skeleton width="50%" height="26px" class="m-2"></p-skeleton>
+                                    <p-skeleton width="100px" height="30px" class="m-3"></p-skeleton>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </ng-container>
+                    <ng-template #doctorList>
+                        <div *ngFor="let doctor of filteredDoctors" class="col-12 md:col-6 lg:col-6">
+                            <div 
+                                class="doctor-card p-3 mb-3 shadow-sm rounded-lg flex flex-col md:flex-row border border-gray-200 bg-white"
+                                style="height: 100%"
+                            >
+                                <div class="doctor-image flex justify-center items-center w-full md:w-40 h-full md:h-30">
+                                    <img 
+                                        [src]="doctor.image" 
+                                        alt="{{doctor.name}}" 
+                                        class="rounded-md object-cover w-full md:w-40 h-52"
+                                    >
+                                </div>
+        
+                                <div class="doctor-details flex-1 mt-3 md:mt-0 md:ml-4 text-center md:text-left">
+                                    <div class="flex items-center text-sm mt-1 justify-center md:justify-start">
+                                        <div class="text-lg font-semibold">{{ doctor.name }}</div>
+                                    </div>
+        
+                                    <div class="text-lg font-semibold">{{ doctor.specialization }}</div>
+        
+                                    <div class="flex items-center text-sm mt-1 justify-center md:justify-start">
+                                        <span class="font-bold text-green-600 text-sm flex items-center">
+                                            <i class="pi pi-star-fill mr-1"></i>{{ doctor.rating }} 
+                                        </span>
+                                        <span class="text-gray-500 ml-2">{{ doctor.reviews }} Ratings</span>
+                                    </div>
+        
+                                    <div class="text-sm text-gray-700 mt-1">
+                                        <i class="pi pi-map-marker mr-1"></i>{{ doctor.location }}
+                                    </div>
+                                    <div class="text-sm text-gray-700 mt-1">
+                                        {{ doctor.experience }} in Healthcare
+                                    </div>
+        
+                                    <div class="text-xs text-red-600 mt-1">
+                                        <i class="pi pi-exclamation-circle mr-1"></i>"{{ doctor.connectionNote }}" {{ doctor.suggestions }} Suggestions
+                                    </div>
+        
+                                    <div class="flex flex-col md:flex-row items-center mt-3 space-y-2 md:space-y-0 md:space-x-2">
+                                        <a [href]="'tel:' + doctor.phone" class="px-3 py-2 bg-green-600 text-white rounded flex items-center">
+                                            <i class="pi pi-phone mr-2"></i>{{ doctor.phone }}
+                                        </a>
+                                        <a [href]="doctor.whatsappLink" target="_blank" class="px-3 py-2 bg-green-500 text-white rounded flex items-center">
+                                            <i class="pi pi-whatsapp mr-2"></i> WhatsApp
+                                        </a>
+                                        <button class="px-3 py-2 bg-blue-600 text-white rounded flex items-center">
+                                            <i class="pi pi-send mr-2"></i> Send Enquiry
+                                        </button>
+                                    </div>
+        
+                                    <div class="text-xs text-gray-500 mt-2">
+                                        <i class="pi pi-chart-line mr-1"></i>{{ doctor.recentEnquiries }} people recently enquired
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
                 </div>
             </div>
         </div>
+        
         
         
         

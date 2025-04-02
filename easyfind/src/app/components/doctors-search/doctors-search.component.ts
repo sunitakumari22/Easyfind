@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { Skeleton } from 'primeng/skeleton';
 
 @Component({
   selector: 'app-doctors-search',
-  imports: [DropdownModule,FormsModule ,CommonModule ,ToastModule],
+  imports: [DropdownModule,FormsModule ,CommonModule ,ToastModule,Skeleton],
   providers:[MessageService],
   templateUrl: './doctors-search.component.html',
   styleUrl: './doctors-search.component.scss'
@@ -20,6 +21,8 @@ export class DoctorsSearchComponent implements OnInit {
   filteredDoctors: any[] = [];
   specializations: string[] = [];
   selectedSpecialization: string = '';
+  isloading:boolean=false;
+  isDisplay:boolean=false;
 
   constructor(private doctorService: DoctorsSearchService,
     private router: Router,
@@ -28,6 +31,8 @@ export class DoctorsSearchComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.isloading=true;
+    this.isDisplay=true
     this.route.queryParams.subscribe(params => {
       this.selectedSpecialization = params['specialization'] || '';
   
@@ -42,7 +47,7 @@ export class DoctorsSearchComponent implements OnInit {
           this.filterDoctors();
         }
         console.log(this.filteredDoctors,"filter doctors");
-        
+        this.isloading=false;
       });
     });
   }
