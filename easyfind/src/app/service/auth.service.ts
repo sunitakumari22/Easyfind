@@ -23,6 +23,10 @@ getUserName(): string {
   return userData ? JSON.parse(userData).username : '';
 }
 
+logout() {
+  localStorage.removeItem('loggedInUser');
+}
+
 
   
 }

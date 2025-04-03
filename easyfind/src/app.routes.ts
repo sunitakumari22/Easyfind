@@ -15,6 +15,7 @@ import { RestaurantsComponent } from './app/components/restaurants/restaurants.c
 import { GymComponent } from './app/components/gym/gym.component';
 import { HomeDecoreComponent } from './app/components/home-decore/home-decore.component';
 import { AddNewComponent } from './app/components/add-new/add-new.component';
+import { LogoutComponent } from './app/components/logout/logout.component';
 
 export const appRoutes: Routes = [
     {
@@ -23,7 +24,8 @@ export const appRoutes: Routes = [
         children: [
             // { path: '', component: Dashboard },
             { path: '', component: DashBoardComponent },
-            { path: 'login', component: LoginComponent, data: { title: 'Doctors Components' } },
+            { path: 'login', component: LoginComponent, data: { title: 'Login Components' } },
+            { path: 'logout', component: LogoutComponent, data: { title: 'Logout Components' } },
             { path: 'doctors', component: DoctorsComponent, data: { title: 'Doctors Components' } },
             { path: 'doctors-search', component: DoctorsSearchComponent, data: { title: 'Doctors Components' } },
             { path: 'real-state', component: RealStateComponent, data: { title: 'Real State Components' } },

@@ -1,0 +1,15 @@
+<p-dialog header="Confirmation!" [(visible)]="logoutDialog" (onHide)="onClickNo()" [modal]="true" [closable]="false"
+  [draggable]="false">
+ 
+  <div>
+    <p style="margin-top: 30px; font-size: 16px; text-align: center; font-weight: bold">Are you sure you want to sign
+      out?</p>
+  </div>
+  <ng-template pTemplate="footer">
+    <div class="p-grid p-nogutter flex flex-column gap-2">
+      <button pButton pRipple type="button" icon="pi pi-check" (click)="onClickYes()" label="Yes" class="yes-button p-button-danger"></button>
+      <button pButton pRipple type="button" icon="pi pi-times" (click)="onClickNo()" label="No" class="no-button p-button-secondary"></button>
+    </div>
+  </ng-template>
+</p-dialog>
+
