@@ -17,8 +17,10 @@ import { AppMenuitem } from './app.menuitem';
 })
 export class AppMenu {
     model: MenuItem[] = [];
+    
 
     ngOnInit() {
+        const isLoggedIn = !!localStorage.getItem('loggedInUser');
         this.model = [
             {
                 label: 'Home',
@@ -35,14 +37,12 @@ export class AppMenu {
                     { label: 'Beauty Spa', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
                     { label: 'Aashram', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
                     { label: 'Gym', icon: 'pi pi-fw pi-tablet', routerLink: ['/gym'] },
-                    { label: 'Overlay', icon: 'pi pi-fw pi-clone', routerLink: ['/uikit/overlay'] },
-                    { label: 'Media', icon: 'pi pi-fw pi-image', routerLink: ['/uikit/media'] },
-                    { label: 'Menu', icon: 'pi pi-fw pi-bars', routerLink: ['/uikit/menu'] },
-                    { label: 'Message', icon: 'pi pi-fw pi-comment', routerLink: ['/uikit/message'] },
-                    { label: 'File', icon: 'pi pi-fw pi-file', routerLink: ['/uikit/file'] },
-                    { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/uikit/charts'] },
-                    { label: 'Timeline', icon: 'pi pi-fw pi-calendar', routerLink: ['/uikit/timeline'] },
-                    { label: 'Misc', icon: 'pi pi-fw pi-circle', routerLink: ['/uikit/misc'] }
+                    isLoggedIn
+                    ? { label: 'Logout', icon: 'pi pi-fw pi-power-off', routerLink: ['/logout'] }
+                    : { label: 'Login', icon: 'pi pi-fw pi-sign-in', routerLink: ['/login'] },
+            
+                    
+                    
                 ]
             },
            
