@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:5000/list';
+  private apiUrl = 'https://easyfind-backend-sigma.vercel.app/api/adminList';
   private storageKey = 'user';
 
   constructor(private http: HttpClient) {}
