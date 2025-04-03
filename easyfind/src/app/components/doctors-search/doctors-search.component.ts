@@ -3,14 +3,15 @@ import { DoctorsSearchService } from '../../service/doctors-search.service';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { Skeleton } from 'primeng/skeleton';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-doctors-search',
-  imports: [DropdownModule,FormsModule ,CommonModule ,ToastModule,Skeleton],
+  imports: [DropdownModule,FormsModule ,CommonModule ,ToastModule,Skeleton,ButtonModule ],
   providers:[MessageService],
   templateUrl: './doctors-search.component.html',
   styleUrl: './doctors-search.component.scss'
@@ -23,6 +24,7 @@ export class DoctorsSearchComponent implements OnInit {
   selectedSpecialization: string = '';
   isloading:boolean=false;
   isDisplay:boolean=false;
+  isLoggedIn: boolean = false; 
 
   constructor(private doctorService: DoctorsSearchService,
     private router: Router,
@@ -51,6 +53,23 @@ export class DoctorsSearchComponent implements OnInit {
       });
     });
   }
+ 
+
+  handleAddNew() {
+    const user = localStorage.getItem('loggedInUser');  
+    if (user) {
+        this.router.navigate(['/addNew']); 
+    } else {
+        
+        // this.router.navigate(['/login']);
+        this.messageService.add({
+          severity: 'warn',
+          summary: 'Access Denied',
+          detail: 'If you are an admin, please log in first.',
+          life: 3000
+      });
+    }
+}
 
   extractSpecializations() {
     const specializationsSet = new Set(this.doctors.map(doctor => doctor.specialization));
