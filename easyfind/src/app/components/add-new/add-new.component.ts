@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControlName, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { Checkbox } from 'primeng/checkbox';
 import { ToastModule } from 'primeng/toast';
 import { AddNewService } from '../../service/add-new.service';
 import { ButtonModule } from 'primeng/button';
+import { TabViewModule } from 'primeng/tabview';
 
 @Component({
   selector: 'app-add-new',
-  imports: [ToastModule, ReactiveFormsModule,ButtonModule],
+  imports: [ToastModule, ReactiveFormsModule,ButtonModule,TabViewModule ],
   providers:[MessageService],
   templateUrl: './add-new.component.html',
   styleUrl: './add-new.component.scss'

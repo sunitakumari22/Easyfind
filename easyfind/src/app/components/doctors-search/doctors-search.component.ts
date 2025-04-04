@@ -58,7 +58,7 @@ export class DoctorsSearchComponent implements OnInit {
   handleAddNew() {
     const user = localStorage.getItem('loggedInUser');  
     if (user) {
-        this.router.navigate(['/addNew']); 
+        this.router.navigate(['/newDoctors']); 
     } else {
         
         // this.router.navigate(['/login']);
