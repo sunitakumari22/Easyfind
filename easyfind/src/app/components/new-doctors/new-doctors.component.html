@@ -1,0 +1,96 @@
+<p-toast></p-toast>
+<div class="pb-6">
+    <div class="grid">
+        <div class="col-span-12 pb-5">
+            <div class="toolbar-demo card">
+                <div class="p-toolbar-group-left">
+                    <div class="header-left-div flex align-items-center">
+                        <!-- <div class="header-div1 mr-3">
+                            <i class="pi pi-users text-5xl text-primary"></i>
+                        </div> -->
+                        <div class="header-div2">
+                            <h5 class="m-0 text-2xl text-color">Doctors Onboarding</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12">
+            <div class="card">
+              <p-tabView>
+                <p-tabPanel header="Details">
+                  <form [formGroup]="hotelForm" (ngSubmit)="submitForm()" class="grid p-fluid">
+                    <div class="grid grid-cols-12 gap-8">
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="name">
+                          <i class="pi pi-user mr-2"></i> Doctor's Name
+                          <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" pInputText formControlName="name" id="name" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="specialists">
+                          <i class="pi pi-briefcase mr-2"></i> Specialization
+                          <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" pInputText formControlName="specialists" id="specialists" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="address">
+                          <i class="pi pi-map-marker mr-2"></i> Address
+                          <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" pInputText formControlName="address" id="address" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="phone">
+                          <i class="pi pi-phone mr-2"></i> Phone
+                        </label>
+                        <input type="text" pInputText formControlName="phone" id="phone" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="whatsapp">
+                          <i class="pi pi-whatsapp mr-2"></i> WhatsApp Link
+                        </label>
+                        <input type="text" pInputText formControlName="whatsappLink" id="whatsapp" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="rating">
+                          <i class="pi pi-star mr-2"></i> Rating
+                        </label>
+                        <input type="number" pInputText formControlName="rating" id="rating" min="0" max="5" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="reviews">
+                          <i class="pi pi-comments mr-2"></i> Reviews
+                        </label>
+                        <input type="number" pInputText formControlName="reviews" id="reviews" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="enquiries">
+                          <i class="pi pi-envelope mr-2"></i> Recent Enquiries
+                        </label>
+                        <input type="number" pInputText formControlName="recentEnquiries" id="enquiries" class="w-full" />
+                      </div>
+                      <div class="col-span-12 lg:col-span-6 xl:col-span-3">
+                        <label for="image">
+                          <i class="pi pi-image mr-2"></i> Image URL
+                        </label>
+                        <input type="text" pInputText formControlName="image" id="image" class="w-full" />
+                      </div>
+                      <div class="text-center mt-4">
+                        <button pButton type="submit" label="Update" class="p-button-success w-full md:w-auto"></button>
+                      </div>
+                    </div>
+                  </form>
+                </p-tabPanel>
+              </p-tabView>
+            </div>
+          </div>
+          
+          
+      
+    </div>
+</div>
+
